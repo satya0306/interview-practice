@@ -1,0 +1,15 @@
+<html>
+	<script>
+		function copyClass(name,age){
+			this.name = name;
+		    this.age = age;
+		    this.printInfo = function(){
+		    	console.log(this.name);
+		        console.log(this.age);
+		    }
+		}
+		var obj = new copyClass("Vineet", 23);
+		obj.printInfo();
+	</script>
+</html>
+	
