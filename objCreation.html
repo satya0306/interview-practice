@@ -1,6 +1,8 @@
 <html>
 	<script>
-		function copyClass(name,age){
+	// 1. object creation using function as a class
+
+		function copyClass(name,age){ 				// Function acting as a Class.  
 			this.name = name;
 		    this.age = age;
 		    this.printInfo = function(){
@@ -8,8 +10,47 @@
 		        console.log(this.age);
 		    }
 		}
-		var obj = new copyClass("Vineet", 23);
-		obj.printInfo();
+		var obj = new copyClass("Vineet", 23);     	// Creating the object of copyClass and initializing the parameters. 
+		obj.printInfo();							// Calling the method of copyClass. 
+
+	// 2. object creation Using object literals
+			
+		var obj = {									// Creating Object. 
+			name : "",
+			age : "",
+			printInfo : function(){
+				console.log(this.name);
+				console.log(this.age);
+			}
+
+		}
+
+		obj.name = "Vivek";							// Initializing the parameters. 
+		obj.age = 25;
+
+		obj.printInfo();							// Using method of the object. 
+
+	// 3. Singleton using a function:
+	
+													// Creating singleton object. 
+		var obj = new function() { 
+		    this.name = ""; 
+		    this.age = ""; 
+		    this.printInfo = function() { 
+		        console.log(this.name); 
+		        console.log(this.age); 
+		        }; 
+		    } 
+		  
+													// Initializing object. 
+		obj.name = "Vineet"; 
+		obj.age = 20; 
+		  
+		// Calling method of the object. 
+		obj.printInfo(); 	
+
+
+
 	</script>
 </html>
 	
