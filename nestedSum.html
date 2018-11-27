@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Closure</title>
+</head>
+<body>
+	<script>
+		var x = 1, y =2, z=3, a=4;
+		function Sum(x) {
+  			function Inner1(y) {
+    			function Inner2(z)
+    			{ 
+	    				function Inner3(a){
+	      					return x + y + z + a;
+	    				}
+    			return Inner3;
+    		}
+    			return Inner2;
+ 			}
+  			return Inner1;
+		}
+		console.log(Sum(x)(y)(z)(a));
+	</script>
+</body>
+</html>
